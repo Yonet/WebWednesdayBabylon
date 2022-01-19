@@ -11,7 +11,8 @@
         "body-parser": "^1.19.0",
         "express": "^4.17.2",
         "express-pino-logger": "^7.0.0",
-        "microsoft-cognitiveservices-speech-sdk": "^1.19.0"
+        "microsoft-cognitiveservices-speech-sdk": "^1.19.0",
+        "universal-cookie": "^4.0.4"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.30.0",
