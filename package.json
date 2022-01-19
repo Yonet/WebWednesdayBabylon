@@ -4,17 +4,30 @@
     "description": "A simple scene using Babylon.js, typescript and webpack. What could go wrong?",
     "main": "index.ts",
     "dependencies": {
-        "@babylonjs/core": "5.0.0-alpha.61",
-        "@babylonjs/loaders": "5.0.0-alpha.61",
-        "ammo.js": "github:kripken/ammo.js"
+        "@babylonjs/core": "5.0.0-beta.4",
+        "@babylonjs/loaders": "5.0.0-beta.4",
+        "ammo.js": "github:kripken/ammo.js",
+        "axios": "^0.25.0",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.2",
+        "express-pino-logger": "^7.0.0",
+        "microsoft-cognitiveservices-speech-sdk": "^1.19.0"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^2.30.0",
         "@typescript-eslint/parser": "^2.30.0",
+        "body-parser": "^1.19.0",
         "clean-webpack-plugin": "^3.0.0",
+        "dotenv": "^14.2.0",
         "eslint": "^7.32.0",
+        "express": "^4.17.1",
+        "express-pino-logger": "^5.0.0",
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.5.0",
+        "node-env-run": "^4.0.2",
+        "nodemon": "^2.0.7",
+        "npm-run-all": "^4.1.5",
+        "pino-colada": "^2.1.0",
         "source-map-loader": "^3.0.0",
         "ts-loader": "^8.3.0",
         "typescript": "^4.5.2",
@@ -28,6 +41,7 @@
         "start": "npx webpack serve --config webpack.dev.js",
         "build:dev": "npx webpack --config webpack.dev.js",
         "build": "npx webpack --config webpack.prod.js",
+        "server": "node-env-run server --exec nodemon | pino-colada",
         "lint": "npx eslint . --ext .ts,.tsx"
     },
     "repository": {
@@ -50,5 +64,18 @@
     "bugs": {
         "url": "https://github.com/RaananW/babylonjs-webpack-es6/issues"
     },
-    "homepage": "https://github.com/RaananW/babylonjs-webpack-es6"
+    "homepage": "https://github.com/RaananW/babylonjs-webpack-es6",
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "proxy": "http://localhost:3001"
 }

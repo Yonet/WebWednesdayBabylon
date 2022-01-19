@@ -39,6 +39,27 @@ To build the bundle in order to host it, run `npm run build`. This will bundle y
 
 Building will take some time, as it will build each sample (and create a different module for each). If you want to speed up the process, define the scene you want to render in `createScene.ts` (you can see the comment there)
 
+## Debugging on the mobile browser
+
+[![How to debug WebXR on Chrome Dev Tools Tutorial](http://img.youtube.com/vi/r-wSk24Wmpk/0.jpg)](https://www.youtube.com/watch?v=r-wSk24Wmpk)
+
+1. Enable [Developer mode](https://developer.android.com/studio/debug/dev-options) on your mobile device.
+
+2. Download [Chrome Canary](https://www.google.com/chrome/canary/) or [Edge Canary](https://www.microsoftedgeinsider.com/en-us/download). Checkout [CanIUse.com](https://caniuse.com/#feat=webxr) for other browsers that support [WebXR Device API](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API).
+
+3. Go to chrome://inspect/#devices and click on port forwarding. Add localhost:4200.
+
+![Inspect Devices](images/portForwarding.png)
+
+![Port Forwarding](images/portForwardingEnabled.png)
+
+## Other Resources
+
+-   [Mixed Reality Resources](http://bit.ly/MixedRealityResources)
+-   [Windows Mixed Reality Development](https://docs.microsoft.com/windows/mixed-reality/?WT.mc_id=aiml-0000-ayyonet)
+-   [WebXR APIs](https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API)
+-   [ImmersiveWeb.dev](https://immersiveweb.dev/)
+
 ## What is this
 
 That's an abstract question! What is which one of those wonderful things?
@@ -49,10 +70,10 @@ The rest? You should know already, this is why you are here.
 
 ## What is covered
 
-- Latest typescript version
-- Simple texture loading (using url-loader)
-- dev-server will start on command (webpack-dev-server)
-- A working core-only example of babylon
-- Full debugging with any browser AND VS Code
-- (production) bundle builder.
-- eslint default typescript rules integrated
+-   Latest typescript version
+-   Simple texture loading (using url-loader)
+-   dev-server will start on command (webpack-dev-server)
+-   A working core-only example of babylon
+-   Full debugging with any browser AND VS Code
+-   (production) bundle builder.
+-   eslint default typescript rules integrated
